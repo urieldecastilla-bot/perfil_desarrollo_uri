@@ -19,6 +19,25 @@
     text-align: center; 
     border-radius: 10px;
 }
+.reelImg {
+    width: 100px;
+    height: 100px;
+}
+
+.botonEspecial {
+    background-color: aqua;
+    width: 160px;
+    border-radius: 10px;
+    color: white;
+}
+
+.botonCarrito {
+    background-color: aqua;
+    width: 160px;
+    border-radius: 10px;
+    color: white;
+    
+}
 
 #container{ /*id*/
     display: flex; 
