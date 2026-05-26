@@ -44,6 +44,25 @@
     gap: 10px;
 }
 
+.boton-transicion {
+        /* Estilos iniciales */
+        background-color: #3498db; /* Azul */
+        color: white;
+        padding: 15px 30px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+
+        /* Configuración de la transición */
+        transition: background-color 0.3s ease;
+    }
+
+/* Cambios al pasar el cursor */
+.boton-transicion:hover {
+    background-color: #2ecc71; /* Verde */
+}
+
 @media (max-width:480px){ /*media query*/
     #container{ /*id*/
         flex-direction: column;
