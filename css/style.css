@@ -1,3 +1,7 @@
+ul li:nth-child(odd) {
+    color:red;
+}
+
 .cuadro{ /*class*/
     background-color: rgba(55, 0, 255, 0.897); 
     flex: 1;
@@ -62,6 +66,113 @@
 .boton-transicion:hover {
     background-color: #2ecc71; /* Verde */
 }
+
+/* Estilos base del cuadro */
+.cuadro-animado {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db; /* Azul inicial */
+  
+  /* Configuración de la animación */
+  animation-name: cambiarCuadro;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+/* Contenedor principal del banner */
+.banner {
+  width: 100%;
+  height: 50px;
+  background-color: #111;
+  overflow: hidden; /* Oculta el texto que sale del cuadro */
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Contenedor del banner */
+.banner-avanzado {
+  width: 100%;
+  height: 50px;
+  background-color: #1a1a24;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 2px solid #ff007f;
+}
+
+/* Texto que se va a mover */
+.texto-deslizante {
+  position: absolute;
+  white-space: nowrap; /* Evita que el texto se parta en varias líneas */
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  
+  /* Configuración de la animación */
+  animation-name: deslizarTexto;
+  animation-duration: 8s;
+  animation-timing-function: linear; /* Movimiento constante sin pausas */
+  
+  /* Propiedades solicitadas */
+  animation-delay: 2s; /* Espera 2 segundos antes de iniciar por primera vez */
+  animation-iteration-count: 3; /* El texto pasará exactamente 3 veces y se detendrá */
+}
+
+/* Texto con propiedades avanzadas */
+.texto-avanzado {
+  position: absolute;
+  white-space: nowrap;
+  color: #00ffcc;
+  font-family: 'Arial Black', sans-serif;
+  font-size: 1.1rem;
+  
+  /* Configuración de la animación */
+  animation-name: deslizarBanner;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  
+  /* 1. ACELERACIÓN AVANZADA: Entrada rápida, pausa en medio, salida rápida */
+  animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  
+  /* 2. DIRECCIÓN AVANZADA: Va de derecha a izquierda, y luego regresa de izquierda a derecha */
+  animation-direction: alternate;
+}
+
+/* Definición del movimiento */
+@keyframes deslizarBanner {
+  0% {
+    left: 100%; /* Empieza oculto a la derecha */
+  }
+  100% {
+    left: 0%; /* Se detiene justo al alinearse a la izquierda del banner */
+  }
+}
+
+/* Definición del movimiento de derecha a izquierda */
+@keyframes deslizarTexto {
+  0% {
+    left: 100%; /* Empieza completamente fuera de la pantalla, a la derecha */
+  }
+  100% {
+    left: -100%; /* Termina completamente fuera de la pantalla, a la izquierda */
+  }
+}
+
+/* Definición del movimiento y color */
+@keyframes cambiarCuadro {
+  0% {
+    transform: scale(1);
+    background-color: #80f089; /* Azul */
+  }
+  100% {
+    transform: scale(1.8);
+    background-color: #e74c3c; /* Rojo */
+    border-radius: 10px;        /* Esquinas suaves al crecer */
+  }
+}
+
 
 @media (max-width:480px){ /*media query*/
     #container{ /*id*/
