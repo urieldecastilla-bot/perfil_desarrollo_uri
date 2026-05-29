@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN oficial de Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+    <!-- 1. Menú de Navegación (Navbar Responsivo) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MiProyecto uriel</a>
+            <!-- Botón Hamburguesa para pantallas móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Contenedor de enlaces que se colapsará -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Sección de Presentación con Tarjetas -->
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Nuestros Servicios</h1>
+        <p class="text-center text-muted mb-5">Descubre lo que ofrecemos adaptado a cualquier dispositivo.</p>
+
+        <!-- Fila de Tarjetas Responsivas -->
+        <div class="row g-4">
+            
+            <!-- Tarjeta 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Diseño Web</h5>
+                        <p class="card-text">Creamos interfaces modernas, atractivas y completamente optimizadas para buscadores.</p>
+                        <a onclick="alert ('mensaje')" href="#" class="btn btn-primary">Saber más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Desarrollo Móvil</h5>
+                        <p class="card-text">Aplicaciones fluidas e intuitivas desarrolladas a la medida para Android y sistemas iOS.</p>
+                        <a onclick="alert('mensaje')" href="#" class="btn btn-primary">Saber más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col-12 col-md-12 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Marketing Digital</h5>
+                        <p class="card-text">Estrategias de crecimiento digital enfocadas en maximizar el rendimiento de tu negocio.</p>
+                        <a onclick="alert('mensaje')" href="#" class="btn btn-primary">Saber más</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JS oficial de Bootstrap (Obligatorio para que funcione el menú hamburguesa móvil) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>    
+</body>
+</html>

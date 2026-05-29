@@ -140,6 +140,22 @@ ul li:nth-child(odd) {
   animation-direction: alternate;
 }
 
+.enlace-icono::before {
+  content: "📄";       /* El ícono o símbolo que deseas mostrar */
+  margin-right: 8px;   /* Separa el ícono del texto del enlace */
+  font-size: 1.2rem;   /* Ajusta el tamaño del ícono */
+}
+
+
+.texto-destacado::first-letter {
+  font-size: 3rem;           /* Hace la letra mucho más grande */
+  font-weight: bold;         /* La hace más gruesa */
+  color: #ff5733;            /* Cambia el color a un tono llamativo */
+  float: left;               /* Hace que el texto rodee la letra */
+  margin-right: 8px;         /* Separa la letra del resto del texto */
+  line-height: 1;            /* Ajusta la altura de línea para que cuadre bien */
+}
+
 /* Definición del movimiento */
 @keyframes deslizarBanner {
   0% {
