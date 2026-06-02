@@ -1,0 +1,45 @@
+// Variables de configuración
+$gap-base: 20px;
+$color-fondo: #f4f4f4;
+
+.grid-principal {
+  display: grid;
+  grid-template-columns: 2fr 1fr; // Dos columnas (Contenido y Sidebar)
+  grid-template-rows: auto 1fr auto;
+  gap: $gap-base;
+  padding: $gap-base;
+  min-height: 100vh;
+
+  .header, .footer {
+    grid-column: span 2; // Ocupan todo el ancho
+    background-color: #333;
+    color: white;
+    padding: 15px;
+  }
+
+  .sidebar {
+    background-color: #e0e0e0;
+    padding: 15px;
+  }
+
+  .contenido-principal {
+    background-color: $color-fondo;
+    padding: 15px;
+
+    // SECCIÓN ANIDADA: El hijo se convierte en un nuevo Grid
+    .grid-anidado {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); // 3 columnas iguales para las tarjetas
+      gap: 15px;
+      margin-top: 15px;
+
+      .tarjeta {
+        background-color: white;
+        border: 1px solid #ddd;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+    }
+  }
+}

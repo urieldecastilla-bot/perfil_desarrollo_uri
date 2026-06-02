@@ -1,0 +1,22 @@
+.grid-principal {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+.grid-principal .contenido-principal {
+  background-color: #f8f9fa;
+}
+.grid-principal .contenido-principal .grid-anidado {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.grid-principal .contenido-principal .grid-anidado .mi-tarjeta-personalizada {
+  border: 2px solid #ff5722;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.grid-principal .contenido-principal .grid-anidado .mi-tarjeta-personalizada:hover {
+  background-color: rgb(255, 222.6923076923, 212.5);
+}/*# sourceMappingURL=style_bootatrap.css.map */

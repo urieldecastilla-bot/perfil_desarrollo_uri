@@ -1,0 +1,34 @@
+// 1. Define tus propias variables independientes
+$mi-color-primario: #ff5722; // Tu color personalizado
+$gap-base: 20px;
+
+// 2. Tu estructura de Grid Anidado (Primera Parte)
+.grid-principal {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gap-base;
+  padding: $gap-base;
+
+  .contenido-principal {
+    background-color: #f8f9fa;
+
+    .grid-anidado {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+
+      // 3. Sobrescribir el componente de Bootstrap que viene del CDN
+      .mi-tarjeta-personalizada {
+        border: 2px solid $mi-color-primario; // Aplicas tu variable Sass
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        
+        // Efecto hover con herramientas nativas de Sass
+        &:hover {
+          background-color: lighten($mi-color-primario, 35%); 
+        }
+      }
+
+    }
+  }
+}
