@@ -5,4 +5,4 @@
 he creadro mi portafolio  digital
 
 --
-docente @migaso
+colaboradores @PabloDom25 y @migaso
